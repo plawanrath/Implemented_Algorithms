@@ -1,0 +1,105 @@
+Short Project 3
+
+a. Fibonacci numbers:
+The file fibonacci.java contains the code to implement and compare the O(n) and O(log n) algorithms.
+
+How to run:
+
+java Fibonacci <value n> <value p> or java  Fibonacci 
+
+Analysis:
+We ran multiple runs with various values and the results show that the log n algorithm is much faster.
+
+Plawans-MacBook-Pro:SP3 plawanrath$ java Fibonacci 2000000000 999953
+Time taken by O(n) method
+f_n%p = 675278
+Time: 102693 msec.
+Memory: 2 MB / 128 MB.
+
+Time taken by O(logn) method: 
+f_n%p = 675278
+Time: 0 msec.
+Memory: 2 MB / 128 MB.
+
+b. Multi pivot quick sort
+
+We analyzed Quick sort and Dual pivot quick sort in QuickSort.java and found out that up till 1 million distinct input arrays, the
+quick sort algorithm works faster.
+
+How to run:
+java QuickSort <file name>
+
+Analysis:
+Plawans-MacBook-Pro:SP3 plawanrath$ java -Xss100m QuickSort 100000-values
+
+Quick Sort Statistics 
+Time: 51 msec.
+Memory: 4 MB / 128 MB.
+Dual Pivot Quick Sort Statistics
+Time: 6293 msec.
+Memory: 4 MB / 128 MB.
+
+Dual pivot quick sort works slower than regular quick sort.
+Even when the input array is not distinct, the quick sort algorithm works faster than dual pivot quick sort.
+
+Plawans-MacBook-Pro:SP3 plawanrath$ java -Xss100m QuickSort 100000-NonDistinctvalues
+
+Quick Sort Statistics 
+Time: 51 msec.
+Memory: 4 MB / 128 MB.
+Dual Pivot Quick Sort Statistics
+Time: 6269 msec.
+Memory: 4 MB / 128 MB.
+
+c. Merge Sort vs Quick Sort
+
+We tried to compare the Merge Sort algorithm with dual pivot quick sort in SortingComparison.java.
+
+How to run:
+java SortingComparisons <file-name>
+
+Analysis:
+
+Plawans-MacBook-Pro:SP3 plawanrath$ java -Xss100m SortingComparison 10000-values
+Merge Sort Statistics 
+Time: 6 msec.
+Memory: 2 MB / 128 MB.
+Dual Pivot Quick Sort Statistics
+Time: 94 msec.
+Memory: 2 MB / 128 MB.
+
+We ran with upto array size of 10 million and found that merge sort is faster then dual pivot quick sort.
+
+d. Selection problem:
+The files SelectionProblem.java implement selection algrithm using partition and selection problem using minHeap respectively. For both files, I have left k = 3 by default. But, another value for k can be passed as command line argument. Although the functions are generic, I have written the main fnction to handle only integer input.
+
+How to run:
+
+1. java SelectionProblem
+2. java SelectionProblem 5 10000-values
+3. java SelectionProblem 10000-values
+
+Analysis:
+
+I ran multiple test runs with files ranging between 10000 to 10 million values and following were my outputs:
+
+Plawans-MacBook-Pro:SP3 plawanrath$ java SelectionProblem 5 1000000-values
+Time taken by selection using partition
+999996 999999 1000000 999998 999997 
+Time: 47 msec.
+Memory: 253 MB / 370 MB.
+Time taken by selection using minHeap
+999996 999997 999998 999999 1000000 
+Time: 23 msec.
+Memory: 253 MB / 370 MB.
+Plawans-MacBook-Pro:SP3 plawanrath$ java SelectionProblem 5 10000000-values
+Time taken by selection using partition
+9999996 9999999 9999997 9999998 10000000 
+Time: 442 msec.
+Memory: 549 MB / 954 MB.
+Time taken by selection using minHeap
+9999996 9999997 9999998 9999999 10000000 
+Time: 149 msec.
+Memory: 549 MB / 954 MB.
+
+All the various runs clearly show that the selection implementation using minHeap was faster than the implementation using partition.

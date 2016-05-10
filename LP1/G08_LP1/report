@@ -1,0 +1,85 @@
+Report 
+Long Project 1
+
+Introduction
+
+For the long project 1, we have tried to cover both Level 1 and Level 2 of the project. We create our own BigInt class, which holds all the features of the Big Integer that we create. So for all the operations we refer our BigInt class to eprform the arithmatic operations. We create a BigIntOperations class which holds all the operations that are performed on the integers. Finally, we have a driver class which takes commands from the user and performs the necessary operations. We usr LinkedLists to store digits of our BigInteger and accept integers passed in as strings to store them in our custom class objects.
+
+Methodology
+
+Our code is structured across 3 files. 
+
+BigInt.java -  This contains the definition of a BigInt as a list of digits. The big integers have a sign field which is set to true if the number is negative. It also has a base field but the base field for this project is set to 10 by default. We also have functions to convert them to string or print the entire list.
+BigIntOperations.java - This contains all the arithmetic operations that we perform on big integers. This class contains functions for addition, subtraction, multiplication, division, modulo, power and squareroot. We reference this class for the operations asked by the users.
+OperationDrivers.java - This file contains the main function and the logic, to take commands from the user in the console and perform the necessary oeprations based on the commands to print the results in the standard output.
+
+For the various action items in Level 1 and Level 2 the action items are as follows:
+
+Level 1:
+1. BigInt(String s) - BigInt.java
+2. BigInt(long num) - BigInt.java
+3. String toString() - BigInt.java
+4. BigInt add(BigInt a,BigInt b) - BigIntOperations.java
+5. BigInt subtract(BigInt a,BigInt b) - BigIntOperations.java
+6. BigInt product(BigInt a,BigInt b) - BigIntOperations.java
+7. BigInt power(BigInt a,long n) - BigIntOperations.java
+8. printList() - BigInt.java
+
+Level 2:
+1. BigInt power(BigInt a,BigInt b) - BigIntOperations.java
+2. BigInt divide(BigInt a,BigInt b) - BigIntOperations.java
+3. BigInt mod(BigInt a,BigInt b) - BigIntOperations.java
+4. BigInt squareRoot(BigInt a) - BigIntOperations.java
+
+Driver Program containing the main function : OperationDrivers.java
+
+How to run:
+The files need to be compiled as
+Javac *.java
+
+To run the driver:
+Java OperationDrivers
+<Then the commands follow>
+....
+
+
+Sample runs:
+Plawans-MacBook-Pro:LP1 plawanrath$ java OperationDrivers
+1 a=90569784495866770974195656280275310090138980613960953881501965823101
+2 b=75040970647524038461398929683905540248523961720824412136973299943953
+3 c=a-b
+4 c
+5 c=b-a
+6 c
+
+15528813848342732512796726596369769841615018893136541744528665879148
+-15528813848342732512796726596369769841615018893136541744528665879148
+
+Plawans-MacBook-Pro:LP1 plawanrath$ java OperationDrivers
+1 x=999
+2 y=8
+3 z=x+y
+4 z
+5 a=x^y
+6 a
+7 z)
+
+base 10: 7 0 0 1 
+1007
+992027944069944027992001
+
+Plawans-MacBook-Pro:LP1 plawanrath$ java OperationDrivers
+1 x=10
+2 p=1
+3 n=1
+4 p=p*x
+5 x=x-n
+6 x?4
+7 p
+
+3628800
+
+
+Conclusion
+
+We managed to complete and test Level 1 and Level 2 with large values. The running time for most oprations remain in between a few miliseconds to a few seconds based on the sizeof the input. The only expensive operations are power and division of very large numbers with very small numbers which in turn would slow down squareRoot if we need squareRoot of a very large number. Arpart from these, the running time of the rest are extremely fast for even very large numbers.

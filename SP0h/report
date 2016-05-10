@@ -1,0 +1,41 @@
+Plawan Kumsr Rath
+Girish Tejwani
+
+For this short project we implement the first 2 questions.
+
+The solutions are in the following files:
+
+DistinctElements.java - Question a
+MostFrequent - Question b
+
+How to Run:
+
+for a: java DistinctElements
+for b: java MostFrequent
+
+Sample runs:
+
+a.
+
+Plawans-MacBook-Pro:SP0h plawanrath$ java DistinctElements
+Please enter size of array
+10
+5 5 5 6 2 2 2 3 1 8
+6
+
+
+b.
+
+Plawans-MacBook-Pro:SP0h plawanrath$ java MostFrequent
+O(nlogn) Algorithm Statistics :
+Most Frequent Element = 3466700
+Time: 1796 msec.
+Memory: 42 MB / 128 MB.
+*********************************************
+O(n) Algorithm Statistics using Hashmap :
+Most Frequent Element = 3466700
+Time: 6574 msec.
+Memory: 450 MB / 779 MB.
+
+We ran with different random arrays of varied sizes and we see that the HashMao implementation is slower.
+

@@ -1,0 +1,15 @@
+Group : G08
+Plawan Kumar Rath
+Girish Tejwani
+
+The zip file contains the following class files:
+
+Question a: ListSets.java
+Question b: LargeIntOperations.java
+Question c: MergeSortLists.java
+Question d: RecursionSimulation.java (Merge Sort on Lists done in Question c is implemented)  
+Question f: CustomLinkedList.java
+
+There is also, SinglyList.java which implements a custom Singly List which I use in most places, and also a Node class which contains a node of the SInglyList.
+
+All questions coded in this project, have a main function containing some sample input and would display some sample output in console.

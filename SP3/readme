@@ -1,0 +1,13 @@
+Short Project 3
+
+We have the following files in the project:
+
+PQ.java,BinaryHeap.java - Used for minHeap in (d)
+RandomFiles.java - used to generate large files with random inputs
+
+Fibonacci.java - for (a)
+QuickSort.java  - for (b) and (c)
+SortingComparison.java - for (c)
+SelectionProblem.java - for (d)
+
+Please look into the report for how to run,analysis and answers to qeustions

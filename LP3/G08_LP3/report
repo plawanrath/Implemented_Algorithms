@@ -1,0 +1,88 @@
+Report LP 3
+Plawan Kumar Rath
+Girish Tejwani
+
+Introduction
+
+For this Long Project we implemented both the Levels 1 and Levels 2. For Level 1 we impmemented the BFS, DAG shortest paths, Dijkistra's algorithm and BellMan Ford algorithm to find the shortest paths. As per the specifications we print the paths only if the number of nodes is less than 100 or else we simply print the shortest path length. For Level 2 we used the BellMan Ford algorithm to generate the shortest paths in order to count the number of shortest paths. We chose BellMan Ford algorithm because it can handle all cases of finding the shortest paths.
+
+Implementation Samples
+
+Plawans-MacBook-Pro:G08_LP3 plawanrath$ java DriverLevel1
+8 12
+1 2 2 
+1 4 1
+2 5 10
+2 4 3
+5 7 6
+3 1 4
+3 6 5
+4 3 2
+7 6 1
+4 5 2
+4 7 4
+4 6 8
+
+Dij 20
+1 0 -
+2 2 1
+3 3 4
+4 1 1
+5 3 4
+6 6 7
+7 5 4
+8 INF -
+Time taken = 7ms
+
+Plawans-MacBook-Pro:G08_LP3 plawanrath$ java DriverLevel2
+7 8
+1 2 2
+1 3 3
+2 4 5
+3 4 4
+4 5 1
+5 1 -7
+6 7 -1
+7 6 -1
+Time taken = 5ms
+
+7
+1 0 1
+2 2 1
+3 3 1
+4 7 2
+5 8 2
+6 INF 0
+7 INF 0
+
+Plawans-MacBook-Pro:G08_LP3 plawanrath$ java DriverLevel1 /Users/plawanrath/Documents/LP3_samples/lp3-l1-in-m1.txt
+BFS 25400
+Time taken = 70ms
+
+Plawans-MacBook-Pro:G08_LP3 plawanrath$ java DriverLevel1 /Users/plawanrath/Documents/LP3_samples/lp3-l1-in-m2.txt
+Dij 1475038
+Time taken = 114ms
+
+Plawans-MacBook-Pro:G08_LP3 plawanrath$ java DriverLevel1 /Users/plawanrath/Documents/LP3_samples/lp3-l1-in-m3.txt
+B-F 147639
+Time taken = 134ms
+
+Plawans-MacBook-Pro:G08_LP3 plawanrath$ java DriverLevel1 /Users/plawanrath/Documents/LP3_samples/lp3-l1-in-m4.txt
+DAG 13584
+Time taken = 227ms
+
+Plawans-MacBook-Pro:G08_LP3 plawanrath$ java DriverLevel2 /Users/plawanrath/Documents/LP3_samples/no30.txt
+Zero Weight Cycle
+15->27->25->11->12->7->15
+
+Plawans-MacBook-Pro:G08_LP3 plawanrath$ java DriverLevel2 /Users/plawanrath/Documents/LP3_samples/no-10k.txt
+Zero Weight Cycle
+2541->3294->1982->7235->3657->2541
+
+Analysis
+
+After running all the algorithms with various graph sizes, we see that the BellMan Ford algorithm is the slowest of them all but it is also the most efficient algorithm and can cover all scenarios for finding the shortest paths. That is the reason why although the running time for the Bellman Ford algorithm is slwo, we still chose that algorithm to find the number of shortest paths in the graph for level 2 bacause running the B-F algorithm ensures finding of shortest paths in an algorithm if possible.
+
+Conclusion
+
+In thie project we implement and analyzed the complexities and the constraints of the various shortest path finding algirhtms. While some algoeithms are better than other in some conditions, it is evident that if a standard shortest path finding algorithm is the need then we need to compromise speed to run the Bellman Ford algorithm or else if the graph is a certain type of graph then we can speed up the computation of shortest paths by running more simpler and faster algorithms based on the correct constraints.

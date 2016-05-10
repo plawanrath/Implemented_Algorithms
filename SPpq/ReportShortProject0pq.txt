@@ -1,0 +1,19 @@
+Report Short Project 0pq
+Plawan Kumar Rath
+Girish Tejwani
+
+For the implementation, We made some minor adjustments to what was discussed in class. We modify the Vertex class itself to implement Index and Comparable and move the compareTo function into Vertex. So, the IndexedHeap can also be implemented using null comparator.
+
+We completed Binary Heap and IndexedHeap and also Prim's algorithm with both implementations. We did test both of them but due to lack of time couldn't run sufficient tests to compare running times.
+
+The project contains the following files:
+
+Graph.java - (no change)
+Edge.java - (implements comparable now)
+Vertex.java - implements comparable and Index interfaces now.
+Index.java - Interface given with the question packet.
+PQ.java - Interface given in question packet.
+BinaryHeap.java - Implementation of BinaryHeap discussed in class and used for first implementation of Prim's algoeithm.
+IndexedHeap.java - Implements indexed Binary Heap and is used for the second implementation of Prim's algorithm.
+MST.jsvs - This is the first implementation of Prim's algorithm using BinaryHeap.
+MST2.java - This is the second implementation of Prim's algorithm using ImdexedHeap.

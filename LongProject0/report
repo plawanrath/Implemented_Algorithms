@@ -1,0 +1,34 @@
+Report
+Long Project 0
+Plawan Kumar Rath
+Girish Tejwani
+
+Introduction
+
+The project was intended to implement an algorithm to find Euler Path or Euler Tour in a given graph g. In this project we implement the Hierholzer's algorithm to find Euler path or tour and use a similar logic to check if a given tour ie Euler. Our implementation of the algorithm uses the graph,vertex and edge classes created and discussed in class, along with using a GraphOperations class that we created to keep all fundamental operations on a graph in one place.
+
+Methodology
+
+We implement the Hierholzer's algorithm which fundamentally is, to start from any vertex, and thentraverse an edge adjacent to it, and keep traversing until we either run out of edges or we land up in the same vertex. If we land up in the same vertex and there are still unvisited edges, then we found a sub tour and so we add that to the tour. If all edges are traversed then the tour is complete, so we return the tour.
+
+For the secont function, to verify whether a tour given is Euler, we basically push them into a stack, then for each edge popped, we remove it from the list of unvisited edges. At the end of the tour, if no unvisited edges remain, then the graph is eulerian.
+
+Before we implement the actual algorithm we need to confirm whether the graph is eulerian. To do that we first check if the graph is connected by running a DFS on it. If the graph is connected, then we count the number of odd vertices and if the odd vertex count is 0 or 2 then we can proceed with the algorithm to find Eulerian path or cycle.
+
+Test Runs
+
+The program either expects one argument or no argument at all. A file name can be given as a command line argument. If no command line arguments are passed, then the program expects a graph to be entered in the console. 
+
+THe main function written runs the findEulerTour function and prints out the running time in milliseconds.
+
+For example:
+
+javac *.java
+java EulerTourFinder /Users/plawanrath/Documents/LP0_Files/lp0-big.txt > OutputFile.txt
+
+We ran the program with graphs containing, 500 nodes, 1000 nodes, 10000 nodes and the small and big sample input files and we noticed that the running time of the algorithm excluding time taken to extract input from files ranged between 10 milliseconds for a graph with 500 nodes to about 1 hour and 10 minutes for the graph containing 500000 nodes. On further analysis of the code, we found out that the time taken reduces noticably if we comment out the part of the code where we chek if the graph is connected by running DFS. Basically, if we assume that the given graph is always connected, then the running time of this implementation would reduce noticably for large graphs.
+
+
+References:
+https://en.wikipedia.org/wiki/Eulerian_path
+http://www.utdallas.edu/~rbk/teach/2016s/projects/lp0-6301-2016s.html

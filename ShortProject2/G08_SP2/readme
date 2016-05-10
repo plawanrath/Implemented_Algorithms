@@ -1,0 +1,14 @@
+Plawan Kumar Rath
+Girish Tejwani
+
+Short Project 2
+
+This short project solution uses the Graph,Edge and Vertex classes provided by Dr. Balaji and comprises of the following files.
+
+GraphOperations.java - contains some utility functions that are used by some files.
+TopologicalSort.java - Question a
+SCC.java - Question c
+FindCycles.java - Question d
+EulerianGraphs.java - Question e
+
+Each java file comtains a main function with some sample test imput.
